@@ -65,6 +65,12 @@ jobs:
       run:  cargo test --manifest-path fastpair/rust/bluetooth/Cargo.toml
     - name: Build Fast Pair
       run:  cargo test --manifest-path fastpair/rust/demo/rust/Cargo.toml
+    - name: Build Nearby Connections
+      run:  cargo build --workspace --all-targets --manifest-path connections/rust/Cargo.toml
+    - name: Test Nearby Connections
+      run:  cargo test --workspace --manifest-path connections/rust/Cargo.toml
+    - name: Package Nearby Connections
+      run:  cargo package --workspace --manifest-path connections/rust/Cargo.toml
 
   build-rust-windows:
     name: Build Rust on Windows
@@ -77,4 +83,8 @@ jobs:
       run:  cargo test --manifest-path fastpair/rust/bluetooth/Cargo.toml
     - name: Build Fast Pair
       run:  cargo test --manifest-path fastpair/rust/demo/rust/Cargo.toml
+    - name: Build Nearby Connections
+      run:  cargo build --workspace --all-targets --manifest-path connections/rust/Cargo.toml
+    - name: Test Nearby Connections
+      run:  cargo test --workspace --manifest-path connections/rust/Cargo.toml
   

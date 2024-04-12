@@ -1,0 +1,31 @@
+[package]
+name = "nearby-connections-sys"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Bindings for Nearby Connections C++ impl"
+
+# TODO which of these are needed?
+include = [
+    "/nearby-root/connections/c/**",
+    "/nearby-root/connections/implementation/**",
+    "/nearby-root/connections/v3/**",
+    "/nearby-root/connections/BUILD",
+    "/nearby-root/connections/*.h",
+    "/nearby-root/connections/*.cc",
+    "/nearby-root/internal/analytics/**",
+    "/nearby-root/internal/interop/**",
+    "/nearby-root/internal/platform/**",
+    "/build.rs",
+    "/src/**"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.69.4"
+walkdir = "2.5.0"

@@ -12,6 +12,8 @@ build/**
 ## Build generated
 build/
 DerivedData
+/bazel-*
+/MODULE.bazel.lock
 
 ## Various settings
 *.pbxuser
